@@ -90,9 +90,13 @@ export default function Navigation() {
             <Button variant="ghost" size="sm" data-testid="button-login">
               Login
             </Button>
-            <Button variant="default" size="sm" data-testid="button-get-started">
-              Get Started
-            </Button>
+            <Link href="/get-started">
+              <a>
+                <Button variant="default" size="sm" data-testid="button-get-started">
+                  Get Started
+                </Button>
+              </a>
+            </Link>
           </div>
         </div>
       </div>

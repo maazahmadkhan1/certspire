@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
+import { Link } from "wouter";
 
 export default function CTASection() {
   return (
@@ -18,10 +19,14 @@ export default function CTASection() {
           Join thousands of successful project managers who have aced their exams with CertSpire.
         </p>
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-          <Button size="lg" className="text-base px-8 py-6 h-auto" data-testid="button-cta-get-started">
-            Get Started Now
-            <ArrowRight className="ml-2 w-5 h-5" />
-          </Button>
+          <Link href="/get-started">
+            <a>
+              <Button size="lg" className="text-base px-8 py-6 h-auto" data-testid="button-cta-get-started">
+                Get Started Now
+                <ArrowRight className="ml-2 w-5 h-5" />
+              </Button>
+            </a>
+          </Link>
           <Button size="lg" variant="outline" className="text-base px-8 py-6 h-auto backdrop-blur-sm" data-testid="button-cta-view-pricing">
             View Pricing
           </Button>

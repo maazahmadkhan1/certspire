@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight, ChevronDown } from "lucide-react";
+import { Link } from "wouter";
 
 export default function Hero() {
   return (
@@ -24,10 +25,14 @@ export default function Hero() {
         </p>
 
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-16">
-          <Button size="lg" className="text-base px-8 py-6 h-auto" data-testid="button-start-practicing">
-            Get Started
-            <ArrowRight className="ml-2 w-5 h-5" />
-          </Button>
+          <Link href="/get-started">
+            <a>
+              <Button size="lg" className="text-base px-8 py-6 h-auto" data-testid="button-start-practicing">
+                Get Started
+                <ArrowRight className="ml-2 w-5 h-5" />
+              </Button>
+            </a>
+          </Link>
           <Button size="lg" variant="outline" className="text-base px-8 py-6 h-auto backdrop-blur-sm" data-testid="button-learn-more">
             Learn More
           </Button>
